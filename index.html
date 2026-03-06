@@ -8,13 +8,14 @@
 </head>
 <body>
     <header>
-        <h1>Voice of Success School</h1>
-        <button id="pricing-btn">Pricing</button>
+        <h1>Voice of Success</h1>
+        <button id="pricing-btn">View Pricing</button>
     </header>
 
     <div id="pricing-sidebar" class="sidebar">
         <div class="sidebar-content">
-            <h2>Pricing</h2>
+            <button id="close-btn" class="close-sidebar">&times;</button>
+            <h2>Our Services</h2>
             <div class="pricing-list">
                 <div class="pricing-item">1-1 Voice session - £100</div>
                 <div class="pricing-item">1-1 Public Speaking session - £100</div>
@@ -32,58 +33,51 @@
                 <div class="pricing-item">2 Months Public Speaking Course - £2000</div>
                 <div class="pricing-item">2 Months Effective Business Communication Course - £2000</div>
             </div>
-            <h2>Get in touch!</h2>
-            <p>Voice of Success</p>
-            <p>Address: Suite 9, Cranbrook House, 61 Cranbrook Road, Ilford, England, IG1 4 PG</p>
-            <p>Email: Voiceofsuccessuk@gmail.com</p>
+            
+            <div class="contact-info">
+                <h3>Get in touch</h3>
+                <p>Address: Suite 9, Cranbrook House, 61 Cranbrook Road, Ilford, England, IG1 4 PG</p>
+                <p>Email: Voiceofsuccessuk@gmail.com</p>
+            </div>
         </div>
     </div>
 
-    <section id="about" class="animated-section">
-        <h2>About Voice of Success School</h2>
-        <p>Voice of Success School is where professionals, mostly actors and business people, go to learn the fundamentals of voice training like breathing, posture, and diction. These basic principles, including understanding effective breath exercises, posture, and diction, are key to strong vocal performances and successful business. Our expert voice teacher and vocal coach help guide you through the early stages of vocal progression, assisting with pitch training, developing public communication skills, and keeping steady tempo. Voice of Success builds proficiency through our proprietary Drama School Method, theatre performances, and business experience. All of our lesson programs include a performance aspect.</p>
-    </section>
+    <main>
+        <section id="about" class="animated-section">
+            <h2>About The School</h2>
+            <p>Voice of Success School is where professionals, mostly actors and business people, go to learn the fundamentals of voice training like breathing, posture, and diction. These basic principles are key to strong vocal performances and successful business. Our expert coaches guide you through pitch training, public communication, and steady tempo. We build proficiency through our proprietary Drama School Method and theatre performances.</p>
+        </section>
 
-    <section id="voice-training" class="animated-section">
-        <h2>Voice Training Course</h2>
-        <p>Your voice is at the heart of your performance. This practical and engaging Voice Training programme is designed to help you use it with control, ease, and confidence. Through guided exercises and hands-on practice, you will strengthen vocal support, broaden your expressive range, and develop a clear, resonant sound that carries effortlessly in different performance settings.</p>
-        <p>Created for actors, performers, and anyone wishing to refine their vocal ability, the course provides solid technical foundations and practical tools. By the end, you will feel confident continuing your vocal development independently — whether working on stage, on camera, or in professional speaking contexts.</p>
-        <h3>What You Will Learn</h3>
-        <ul>
-            <li>Gain a clear understanding of how the voice is structured and functions</li>
-            <li>Coordinate breath and body to produce a steady, supported sound</li>
-            <li>Improve breath control for sustained speech or singing</li>
-            <li>Reduce unnecessary tension in the jaw, neck, and throat</li>
-            <li>Build a flexible, well-balanced vocal tone with natural resonance</li>
-            <li>Expand vocal range and experiment with vocal colour and texture</li>
-            <li>Strengthen projection while maintaining ease and clarity</li>
-            <li>Practise applying techniques to different texts and performance formats</li>
-            <li>Leave with practical exercises for continued voice training</li>
-        </ul>
-    </section>
+        <section id="voice-training" class="animated-section">
+            <h2>Voice Training Course</h2>
+            <p>Designed for actors and performers wishing to refine their vocal ability, this course provides solid technical foundations. By the end, you will feel confident continuing your vocal development independently.</p>
+            <ul>
+                <li>Coordinate breath and body for steady sound</li>
+                <li>Reduce unnecessary tension in the jaw and throat</li>
+                <li>Expand vocal range and experiment with resonance</li>
+                <li>Strengthen projection while maintaining clarity</li>
+            </ul>
+        </section>
 
-    <section id="executive-voice" class="animated-section">
-        <h2>Executive Voice Training for Business Leaders</h2>
-        <p>Your voice is more than a communication tool — it is a reflection of your authority, credibility, and leadership. In high-level business environments, the way you speak can influence decisions, inspire teams, and shape perception long before the content of your message is processed.</p>
-        <p>Our Executive Voice Training programmes are designed for ambitious professionals who want their voice to match their vision. Whether you are leading a growing company, managing senior teams, or presenting to large audiences, this course will help you develop a voice that carries strength, composure, and command.</p>
-        <p>Through focused, practical coaching, you will learn how to:</p>
-        <ul>
-            <li>Project authority without strain</li>
-            <li>Speak with clarity, structure, and impact</li>
-            <li>Command attention in boardrooms and large auditoriums</li>
-            <li>Deliver presentations with confidence and influence</li>
-            <li>Strengthen vocal presence under pressure</li>
-            <li>Develop a deeper, more assured, and resonant tone</li>
-        </ul>
-        <p>As your vocal control improves, so does your confidence. You will feel more grounded in high-stakes meetings, more persuasive in negotiations, and more compelling when addressing large audiences.</p>
-        <p>A powerful voice supports powerful leadership. When your delivery aligns with your expertise and ambition, you position yourself to reach new levels in business — whether that means leading a major organisation, scaling your company, or becoming a sought-after public speaker.</p>
-    </section>
+        <section id="executive-voice" class="animated-section">
+            <h2>Executive Voice Training</h2>
+            <p>Your voice is a reflection of your authority and leadership. This course helps you develop a voice that carries strength, composure, and command in high-level business environments.</p>
+            <ul>
+                <li>Project authority without strain</li>
+                <li>Command attention in boardrooms</li>
+                <li>Deliver presentations with confidence</li>
+                <li>Develop a deeper, more assured tone</li>
+            </ul>
+        </section>
+    </main>
 
     <footer>
         <p>&copy; 2026 Voice of Success School. All rights reserved.</p>
     </footer>
+
     <script>
         document.addEventListener('DOMContentLoaded', () => {
+            // Scroll animations
             const sections = document.querySelectorAll('.animated-section');
             sections.forEach((section, index) => {
                 setTimeout(() => {
@@ -91,15 +85,20 @@
                 }, index * 200);
             });
 
-            // Pricing sidebar functionality
+            // Sidebar logic
             const pricingBtn = document.getElementById('pricing-btn');
+            const closeBtn = document.getElementById('close-btn');
             const sidebar = document.getElementById('pricing-sidebar');
 
-            pricingBtn.addEventListener('click', () => {
-                sidebar.classList.toggle('open');
+            pricingBtn.addEventListener('click', (e) => {
+                e.stopPropagation();
+                sidebar.classList.add('open');
             });
 
-            // Close sidebar on click outside
+            closeBtn.addEventListener('click', () => {
+                sidebar.classList.remove('open');
+            });
+
             document.addEventListener('click', (event) => {
                 if (!sidebar.contains(event.target) && !pricingBtn.contains(event.target)) {
                     sidebar.classList.remove('open');
